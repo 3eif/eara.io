@@ -3,3 +3,22 @@
     width: 100%;
     background-image: linear-gradient(360deg, rgb(51, 17, 88), rgb(18, 16, 78));
 }
+
+.btn-md {
+    padding: 10px 20px;
+    font-size: 17px;
+    border-radius: 6px;
+}
+
+.btn-blue {
+    font-weight: 700;
+    background-color: rgb(71, 66, 194);
+    color: white;
+    border-color: rgb(71, 66, 194);
+}
+
+.btn-blue:hover { 
+    border-color: rgb(60, 56, 165); 
+    background-color: rgb(60, 56, 165); 
+    color: white;
+}
