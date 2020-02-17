@@ -16,6 +16,18 @@
     border-radius: 7px;
 }
 
+@font-face {
+    font-family: 'roboto';
+    src: url(../fonts/Roboto-Thin.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto-bold';
+    src: url(../fonts/Roboto-Regular.ttf);
+    font-style: normal;
+}
+
 .btn-purple {
     font-weight: 700;
     background-color: rgb(71, 66, 194);
@@ -25,12 +37,14 @@
 
 .btn-outline-light {
     font-weight: 700;
+
     color: white;
     border-color: #5BC5F9;
 }
 
 .btn-outline-light:hover { 
     font-weight: 700;
+
     background-color: #5BC5F9;
     color: white;
     border-color: #5BC5F9;
@@ -62,10 +76,11 @@ body {
 
 h1 {
     font-size: 65px;
-    font-weight: 700;
+    font-family: 'roboto-bold';
 }
 
 p {
     font-size: 25px;
     font-weight: 350;
+    font-family: 'roboto';
 }
