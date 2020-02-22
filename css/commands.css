@@ -1,0 +1,78 @@
+.card, .card-header {
+    background-color: white !important;
+    border: none;
+    padding: 0 !important;
+}
+
+.card {
+    box-shadow: 0 2px 25px 0 rgba(110, 130, 208, .18) !important;
+    margin-bottom: 2%;
+}
+
+.card-body {
+    background: #e8eeff;
+}
+
+.accordian {
+    padding: 15px;
+}
+
+.btn-link {
+    height: 60px;
+    width: 100%;
+    color: #000 !important;
+    font-weight: bold !important;
+    text-align: left !important;
+    text-decoration: none !important;
+}
+
+.btn-link:after {
+    content: '\2212';
+    text-align: center;
+    width: 35px;
+    font-size: 25px;
+    border-radius: 5px;
+    right: 15px;
+    top: 11px;
+    position: absolute;
+    background: #e8eeff;
+}
+
+.commands-gradient {
+    height: 320vh;
+    width: 99%;
+    background-image: linear-gradient(360deg, rgb(72, 32, 114), rgb(18, 16, 78));
+}
+
+.btn-link.collapsed:after {
+    content: '\002B';   
+}
+
+.card-body {
+    color: rgb(47, 47, 47);
+    font-weight: 500 !important;
+    font-size: 18px;
+}
+
+.card-h {
+    padding-left: 0.5%;
+    color: rgb(47, 47, 47);
+    font-size: 25px;
+    font-weight: 600 !important;
+}
+
+.list-h {
+    font-size: 22px;
+    font-weight: 600 !important;
+    text-align: center;
+}
+
+.text-muted {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+}
+
+.list-group-item.active {
+    background-color: #4742C2;
+    border-color: #4742C2;
+}
