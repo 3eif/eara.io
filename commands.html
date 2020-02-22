@@ -54,1049 +54,2203 @@
 
     <h1 style="text-align: center; padding: 3%; font-size: 75px;">Commands</h1>
 
-    <div class="row">
-        <div class="col-2" style="padding-left: 6%;">
-            <div class="list-group" id="list-tab" role="tablist">
-                <a class="list-group-item list-group-item-action active" id="list-all-list" data-toggle="list"
-                    href="#list-all" role="tab" aria-controls="all"><div class="list-h">All</div></a>
-                <a class="list-group-item list-group-item-action" id="list-music-list" data-toggle="list"
-                    href="#list-music" role="tab" aria-controls="music"><div class="list-h">Music</div></a>
-                <a class="list-group-item list-group-item-action" id="list-filters-list" data-toggle="list"
-                    href="#list-filters" role="tab" aria-controls="filters"><div class="list-h">Audio Filters</div></a>
-                <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
-                    href="#list-settings" role="tab" aria-controls="settings"><div class="list-h">Settings</div></a>
-                <a class="list-group-item list-group-item-action" id="list-info-list" data-toggle="list"
-                    href="#list-info" role="tab" aria-controls="info"><div class="list-h">Bot Info</div></a>
+    <div class="mobile">
+        <div class="list-group" id="list-tab" role="tablist" style="padding: 5%;">
+            <a class="list-group-item list-group-item-action active" id="list-all-list" data-toggle="list"
+                href="#list-all" role="tab" aria-controls="all">
+                <div class="list-h">All</div>
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-music-list" data-toggle="list" href="#list-music"
+                role="tab" aria-controls="music">
+                <div class="list-h">Music</div>
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-filters-list" data-toggle="list"
+                href="#list-filters" role="tab" aria-controls="filters">
+                <div class="list-h">Audio Filters</div>
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+                href="#list-settings" role="tab" aria-controls="settings">
+                <div class="list-h">Settings</div>
+            </a>
+            <a class="list-group-item list-group-item-action" id="list-info-list" data-toggle="list" href="#list-info"
+                role="tab" aria-controls="info">
+                <div class="list-h">Bot Info</div>
+            </a>
+        </div>
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="list-all" role="tabpanel" aria-labelledby="list-all-list">
+                <div id="accordion" style="padding-left: 5%; padding-right: 5%;">
+                    <div class="card">
+                        <div class="card-header" id="bassboost">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="card-h">ear bassboost <small class="text-muted">[amount]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="bassboost" data-parent="#accordion">
+                            <div class="card-body">
+                                Bassboosts the current playing song (amount can be between -10 - 10). Type <kbd>ear
+                                    bassboost
+                                    off</kbd> to turn off the bassboost.
+                                </br></br>Aliases: <kbd>bb</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="clear">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="true" aria-controls="collapseTwo">
+                                    <div class="card-h">ear clear</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="clear" data-parent="#accordion">
+                            <div class="card-body">
+                                Clears the entire queue.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="earrape">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <div class="card-h">ear earrape</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="earrape" data-parent="#accordion">
+                            <div class="card-body">
+                                Earrapes the current playing song
+                                </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="forward">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    <div class="card-h">ear fastforward <small class="text-muted">[seconds]</small>
+                                    </div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="forard" data-parent="#accordion">
+                            <div class="card-body">
+                                Fast forwards the current playing song. Default is 10 seconds.
+                                </br></br>Aliases: <kbd>forward</kbd>, <kbd>ff</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="help">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    <div class="card-h">ear help</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="help" data-parent="#accordion">
+                            <div class="card-body">
+                                Sends a list of the bot's commands and information.
+                                </br></br>Aliases: <kbd>commands</kbd>, <kbd>list</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="ignore">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                                    aria-expanded="true" aria-controls="collapseSix">
+                                    <div class="card-h">ear ignore <small class="text-muted">&ltchannel&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="ignore" data-parent="#accordion">
+                            <div class="card-body">
+                                Stops the bot from responding to commands from the channel channel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="join">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    <div class="card-h">ear join</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="join" data-parent="#accordion">
+                            <div class="card-body">
+                                Joins the voice channel you are currently in.
+                                </br></br>Aliases: <kbd>summon</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="leave">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                    <div class="card-h">ear leave</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="leave" data-parent="#accordion">
+                            <div class="card-body">
+                                The bot leaves the voice channel it is currently in.
+                                </br></br>Aliases: <kbd>disconnect</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="listen">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                    <div class="card-h">ear listen <small class="text-muted">&ltchannel&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="listen" data-parent="#accordion">
+                            <div class="card-body">
+                                The bot will resume responding to commands from the channel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="loop">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
+                                    aria-expanded="true" aria-controls="collapseTen">
+                                    <div class="card-h">ear loop <small class="text-muted">[song/queue]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTen" class="collapse" aria-labelledby="loop" data-parent="#accordion">
+                            <div class="card-body">
+                                Loops the current queue/song.
+                                </br></br>Aliases: <kbd>repeat</kbd>, <kbd>loopqueue</kbd>, <kbd>unloop</kbd>,
+                                <kbd>queueloop</kbd>,
+                                <kbd>repeatqueue</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="normal">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                                    <div class="card-h">ear normal</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEleven" class="collapse" aria-labelledby="normal" data-parent="#accordion">
+                            <div class="card-body">
+                                Resets the volume of the current playing song.
+                                </br></br>Aliases: <kbd>reset</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="nowplaying">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
+                                    <div class="card-h">ear nowplaying</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwelve" class="collapse" aria-labelledby="nowplaying" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the current playing song.
+                                </br></br>Aliases: <kbd>playing</kbd>, <kbd>np</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="pause">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseThirteen" aria-expanded="true"
+                                    aria-controls="collapseThirteen">
+                                    <div class="card-h">ear pause</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThirteen" class="collapse" aria-labelledby="pause" data-parent="#accordion">
+                            <div class="card-body">
+                                Pauses the current playing song.
+                                </br></br>Aliases: <kbd>resume</kbd>, <kbd>stop</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="ping">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse14"
+                                    aria-expanded="true" aria-controls="collapse14">
+                                    <div class="card-h">ear ping</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse14" class="collapse" aria-labelledby="ping" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the bot's latency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="play">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15"
+                                    aria-expanded="true" aria-controls="collapse15">
+                                    <div class="card-h">ear play <small class="text-muted">&ltlink/song&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse15" class="collapse" aria-labelledby="play" data-parent="#accordion">
+                            <div class="card-body">
+                                Plays a song from Youtube.
+                                </br></br>Aliases: <kbd>p</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="prefix">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse16"
+                                    aria-expanded="true" aria-controls="collapse16">
+                                    <div class="card-h">ear prefix <small class="text-muted">[prefix]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                            <div class="card-body">
+                                Shows the current prefix of the server, and sets the prefix of the server.
+                                </br></br>Aliases: <kbd>p</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="queue">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse17"
+                                    aria-expanded="true" aria-controls="collapse17">
+                                    <div class="card-h">ear queue</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse17" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the queue and the current playing song.
+                                </br></br>Aliases: <kbd>q</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="remove">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse18"
+                                    aria-expanded="true" aria-controls="collapse18">
+                                    <div class="card-h">ear remove <small class="text-muted">&ltsong position&gt</small>
+                                    </div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse18" class="collapse" aria-labelledby="remove" data-parent="#accordion">
+                            <div class="card-body">
+                                Removes a song from the queue.
+                                </br></br>Aliases: <kbd>delete</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="replay">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse19"
+                                    aria-expanded="true" aria-controls="collapse19">
+                                    <div class="card-h">ear replay</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse19" class="collapse" aria-labelledby="replay" data-parent="#accordion">
+                            <div class="card-body">
+                                Starts the current playing song from the beginning.
+                                </br></br>Aliases: <kbd>delete</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="resume">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseResume" aria-expanded="true" aria-controls="collapseResume">
+                                    <div class="card-h">ear resume</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseResume" class="collapse" aria-labelledby="resume" data-parent="#accordion">
+                            <div class="card-body">
+                                Resumes the current playing song.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="rewind">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse199"
+                                    aria-expanded="true" aria-controls="collapse199">
+                                    <div class="card-h">ear rewind <small class="text-muted">[seconds]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse199" class="collapse" aria-labelledby="replay" data-parent="#accordion">
+                            <div class="card-body">
+                                Rewinds the current playing song. Default is 10 seconds.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="search">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse20"
+                                    aria-expanded="true" aria-controls="collapse20">
+                                    <div class="card-h">ear search <small class="text-muted">&ltsong&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse20" class="collapse" aria-labelledby="search" data-parent="#accordion">
+                            <div class="card-body">
+                                Provides a variety of search results for a song.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="seek">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse21"
+                                    aria-expanded="true" aria-controls="collapse21">
+                                    <div class="card-h">ear seek <small class="text-muted">&ltseconds&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse21" class="collapse" aria-labelledby="seek" data-parent="#accordion">
+                            <div class="card-body">
+                                Skips to the timestamp in the song.
+                                </br></br>Aliases: <kbd>skipto</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="shuffle">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse22"
+                                    aria-expanded="true" aria-controls="collapse22">
+                                    <div class="card-h">ear shuffle</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse22" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
+                            <div class="card-body">
+                                Shuffles the queue.
+                                </br></br>Aliases: <kbd>mix</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="skip">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse23"
+                                    aria-expanded="true" aria-controls="collapse23">
+                                    <div class="card-h">ear skip</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse23" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
+                            <div class="card-body">
+                                Skips the current playing song.
+                                </br></br>Aliases: <kbd>s</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="stats">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse24"
+                                    aria-expanded="true" aria-controls="collapse24">
+                                    <div class="card-h">ear stats</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse24" class="collapse" aria-labelledby="stats" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the bot's stats.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="volume">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25"
+                                    aria-expanded="true" aria-controls="collapse25">
+                                    <div class="card-h">ear volume <small class="text-muted">&ltamount&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
+                            <div class="card-body">
+                                Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to reset
+                                the volume to
+                                default (100).
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="list-music" role="tabpanel" aria-labelledby="list-music-list">
+                <div id="accordion" style="padding-left: 5%; padding-right: 5%;">
+                    <div class="card">
+                        <div class="card-header" id="bassboost">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="card-h">ear bassboost <small class="text-muted">[amount]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="bassboost" data-parent="#accordion">
+                            <div class="card-body">
+                                Bassboosts the current playing song (amount can be between -10 - 10). Type <kbd>ear
+                                    bassboost
+                                    off</kbd> to turn off the bassboost.
+                                </br></br>Aliases: <kbd>bb</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="clear">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                    aria-expanded="true" aria-controls="collapseTwo">
+                                    <div class="card-h">ear clear</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="clear" data-parent="#accordion">
+                            <div class="card-body">
+                                Clears the entire queue.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="earrape">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <div class="card-h">ear earrape</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="earrape" data-parent="#accordion">
+                            <div class="card-body">
+                                Earrapes the current playing song
+                                </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="forward">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    <div class="card-h">ear fastforward <small class="text-muted">[seconds]</small>
+                                    </div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="forard" data-parent="#accordion">
+                            <div class="card-body">
+                                Fast forwards the current playing song. Default is 10 seconds.
+                                </br></br>Aliases: <kbd>forward</kbd>, <kbd>ff</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="join">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                                    <div class="card-h">ear join</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="join" data-parent="#accordion">
+                            <div class="card-body">
+                                Joins the voice channel you are currently in.
+                                </br></br>Aliases: <kbd>summon</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="leave">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseEight" aria-expanded="true" aria-controls="collapseEight">
+                                    <div class="card-h">ear leave</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="leave" data-parent="#accordion">
+                            <div class="card-body">
+                                The bot leaves the voice channel it is currently in.
+                                </br></br>Aliases: <kbd>disconnect</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="loop">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
+                                    aria-expanded="true" aria-controls="collapseTen">
+                                    <div class="card-h">ear loop <small class="text-muted">[song/queue]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTen" class="collapse" aria-labelledby="loop" data-parent="#accordion">
+                            <div class="card-body">
+                                Loops the current queue/song.
+                                </br></br>Aliases: <kbd>repeat</kbd>, <kbd>loopqueue</kbd>, <kbd>unloop</kbd>,
+                                <kbd>queueloop</kbd>,
+                                <kbd>repeatqueue</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="normal">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                                    <div class="card-h">ear normal</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEleven" class="collapse" aria-labelledby="normal" data-parent="#accordion">
+                            <div class="card-body">
+                                Resets the volume of the current playing song.
+                                </br></br>Aliases: <kbd>reset</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="nowplaying">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve">
+                                    <div class="card-h">ear nowplaying</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwelve" class="collapse" aria-labelledby="nowplaying" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the current playing song.
+                                </br></br>Aliases: <kbd>playing</kbd>, <kbd>np</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="pause">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseThirteen" aria-expanded="true"
+                                    aria-controls="collapseThirteen">
+                                    <div class="card-h">ear pause</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThirteen" class="collapse" aria-labelledby="pause" data-parent="#accordion">
+                            <div class="card-body">
+                                Pauses the current playing song.
+                                </br></br>Aliases: <kbd>resume</kbd>, <kbd>stop</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="play">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15"
+                                    aria-expanded="true" aria-controls="collapse15">
+                                    <div class="card-h">ear play <small class="text-muted">&ltlink/song&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse15" class="collapse" aria-labelledby="play" data-parent="#accordion">
+                            <div class="card-body">
+                                Plays a song from Youtube.
+                                </br></br>Aliases: <kbd>p</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="queue">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse17"
+                                    aria-expanded="true" aria-controls="collapse17">
+                                    <div class="card-h">ear queue</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse17" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the queue and the current playing song.
+                                </br></br>Aliases: <kbd>q</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="remove">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse18"
+                                    aria-expanded="true" aria-controls="collapse18">
+                                    <div class="card-h">ear remove <small class="text-muted">&ltsong position&gt</small>
+                                    </div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse18" class="collapse" aria-labelledby="remove" data-parent="#accordion">
+                            <div class="card-body">
+                                Removes a song from the queue.
+                                </br></br>Aliases: <kbd>delete</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="replay">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse19"
+                                    aria-expanded="true" aria-controls="collapse19">
+                                    <div class="card-h">ear replay</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse19" class="collapse" aria-labelledby="replay" data-parent="#accordion">
+                            <div class="card-body">
+                                Starts the current playing song from the beginning.
+                                </br></br>Aliases: <kbd>delete</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="resume">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseResume" aria-expanded="true" aria-controls="collapseResume">
+                                    <div class="card-h">ear resume</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseResume" class="collapse" aria-labelledby="resume" data-parent="#accordion">
+                            <div class="card-body">
+                                Resumes the current playing song.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="rewind">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse199"
+                                    aria-expanded="true" aria-controls="collapse199">
+                                    <div class="card-h">ear rewind <small class="text-muted">[seconds]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse199" class="collapse" aria-labelledby="replay" data-parent="#accordion">
+                            <div class="card-body">
+                                Rewinds the current playing song. Default is 10 seconds.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="search">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse20"
+                                    aria-expanded="true" aria-controls="collapse20">
+                                    <div class="card-h">ear search <small class="text-muted">&ltsong&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse20" class="collapse" aria-labelledby="search" data-parent="#accordion">
+                            <div class="card-body">
+                                Provides a variety of search results for a song.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="seek">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse21"
+                                    aria-expanded="true" aria-controls="collapse21">
+                                    <div class="card-h">ear seek <small class="text-muted">&ltseconds&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse21" class="collapse" aria-labelledby="seek" data-parent="#accordion">
+                            <div class="card-body">
+                                Skips to the timestamp in the song.
+                                </br></br>Aliases: <kbd>skipto</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="shuffle">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse22"
+                                    aria-expanded="true" aria-controls="collapse22">
+                                    <div class="card-h">ear shuffle</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse22" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
+                            <div class="card-body">
+                                Shuffles the queue.
+                                </br></br>Aliases: <kbd>mix</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="skip">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse23"
+                                    aria-expanded="true" aria-controls="collapse23">
+                                    <div class="card-h">ear skip</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse23" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
+                            <div class="card-body">
+                                Skips the current playing song.
+                                </br></br>Aliases: <kbd>s</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="volume">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25"
+                                    aria-expanded="true" aria-controls="collapse25">
+                                    <div class="card-h">ear volume <small class="text-muted">&ltamount&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
+                            <div class="card-body">
+                                Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to reset
+                                the volume to
+                                default (100).
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="list-filters" role="tabpanel" aria-labelledby="list-filters-list">
+                <div id="accordion" style="padding-left: 5%; padding-right: 5%;">
+                    <div class="card">
+                        <div class="card-header" id="bassboost">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
+                                    aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="card-h">ear bassboost <small class="text-muted">[amount]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse" aria-labelledby="bassboost" data-parent="#accordion">
+                            <div class="card-body">
+                                Bassboosts the current playing song (amount can be between -10 - 10). Type <kbd>ear
+                                    bassboost
+                                    off</kbd> to turn off the bassboost.
+                                </br></br>Aliases: <kbd>bb</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="earrape">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    <div class="card-h">ear earrape</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="earrape" data-parent="#accordion">
+                            <div class="card-body">
+                                Earrapes the current playing song
+                                </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="normal">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven">
+                                    <div class="card-h">ear normal</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEleven" class="collapse" aria-labelledby="normal" data-parent="#accordion">
+                            <div class="card-body">
+                                Resets the volume of the current playing song.
+                                </br></br>Aliases: <kbd>reset</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="volume">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25"
+                                    aria-expanded="true" aria-controls="collapse25">
+                                    <div class="card-h">ear volume <small class="text-muted">&ltamount&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
+                            <div class="card-body">
+                                Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to reset
+                                the volume to
+                                default (100).
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+                <div id="accordion" style="padding-left: 5%; padding-right: 5%;">
+                    <div class="card">
+                        <div class="card-header" id="ignore">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
+                                    aria-expanded="true" aria-controls="collapseSix">
+                                    <div class="card-h">ear ignore <small class="text-muted">&ltchannel&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="ignore" data-parent="#accordion">
+                            <div class="card-body">
+                                Stops the bot from responding to commands from the channel channel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="listen">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseNine" aria-expanded="true" aria-controls="collapseNine">
+                                    <div class="card-h">ear listen <small class="text-muted">&ltchannel&gt</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseNine" class="collapse" aria-labelledby="listen" data-parent="#accordion">
+                            <div class="card-body">
+                                The bot will resume responding to commands from the channel.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="prefix">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse16"
+                                    aria-expanded="true" aria-controls="collapse16">
+                                    <div class="card-h">ear prefix <small class="text-muted">[prefix]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                            <div class="card-body">
+                                Shows the current prefix of the server, and sets the prefix of the server.
+                                </br></br>Aliases: <kbd>p</kbd>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="list-info" role="tabpanel" aria-labelledby="list-info-list">
+                <div id="accordion" style="padding-left: 5%; padding-right: 5%;">
+
+                    <div class="card">
+                        <div class="card-header" id="help">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse"
+                                    data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    <div class="card-h">ear help</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="help" data-parent="#accordion">
+                            <div class="card-body">
+                                Sends a list of the bot's commands and information.
+                                </br></br>Aliases: <kbd>commands</kbd>, <kbd>list</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="ping">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse14"
+                                    aria-expanded="true" aria-controls="collapse14">
+                                    <div class="card-h">ear ping</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse14" class="collapse" aria-labelledby="ping" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the bot's latency.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="prefix">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse16"
+                                    aria-expanded="true" aria-controls="collapse16">
+                                    <div class="card-h">ear prefix <small class="text-muted">[prefix]</small></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                            <div class="card-body">
+                                Shows the current prefix of the server, and sets the prefix of the server.
+                                </br></br>Aliases: <kbd>p</kbd>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="stats">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse24"
+                                    aria-expanded="true" aria-controls="collapse24">
+                                    <div class="card-h">ear stats</div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapse24" class="collapse" aria-labelledby="stats" data-parent="#accordion">
+                            <div class="card-body">
+                                Displays the bot's stats.
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="col-10">
-            <div class="tab-content" id="nav-tabContent">
-                <div class="tab-pane fade show active" id="list-all" role="tabpanel" aria-labelledby="list-all-list">
-                    <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
-                        <div class="card">
-                            <div class="card-header" id="bassboost">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="true" aria-controls="collapseOne">
-                                        <div class="card-h">ear bassboost <small class="text-muted">[amount]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="bassboost" data-parent="#accordion">
-                                <div class="card-body">
-                                    Bassboosts the current playing song (amount can be between -10 - 10). Type <kbd>ear bassboost
-                                        off</kbd> to turn off the bassboost.
-                                    </br></br>Aliases: <kbd>bb</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="clear">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                        aria-expanded="true" aria-controls="collapseTwo">
-                                        <div class="card-h">ear clear</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="clear" data-parent="#accordion">
-                                <div class="card-body">
-                                    Clears the entire queue.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="earrape">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                        aria-expanded="true" aria-controls="collapseThree">
-                                        <div class="card-h">ear earrape</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="earrape" data-parent="#accordion">
-                                <div class="card-body">
-                                    Earrapes the current playing song
-                                    </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="forward">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
-                                        aria-expanded="true" aria-controls="collapseFour">
-                                        <div class="card-h">ear fastforward <small class="text-muted">[seconds]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="forard" data-parent="#accordion">
-                                <div class="card-body">
-                                    Fast forwards the current playing song. Default is 10 seconds.
-                                    </br></br>Aliases: <kbd>forward</kbd>, <kbd>ff</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="help">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
-                                        aria-expanded="true" aria-controls="collapseFive">
-                                        <div class="card-h">ear help</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="help" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sends a list of the bot's commands and information.
-                                    </br></br>Aliases: <kbd>commands</kbd>, <kbd>list</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="ignore">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
-                                        aria-expanded="true" aria-controls="collapseSix">
-                                        <div class="card-h">ear ignore <small class="text-muted">&ltchannel&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseSix" class="collapse" aria-labelledby="ignore" data-parent="#accordion">
-                                <div class="card-body">
-                                    Stops the bot from responding to commands from the channel channel.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="join">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
-                                        aria-expanded="true" aria-controls="collapseSeven">
-                                        <div class="card-h">ear join</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseSeven" class="collapse" aria-labelledby="join" data-parent="#accordion">
-                                <div class="card-body">
-                                    Joins the voice channel you are currently in.
-                                    </br></br>Aliases: <kbd>summon</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="leave">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
-                                        aria-expanded="true" aria-controls="collapseEight">
-                                        <div class="card-h">ear leave</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseEight" class="collapse" aria-labelledby="leave" data-parent="#accordion">
-                                <div class="card-body">
-                                    The bot leaves the voice channel it is currently in.
-                                    </br></br>Aliases: <kbd>disconnect</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="listen">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"
-                                        aria-expanded="true" aria-controls="collapseNine">
-                                        <div class="card-h">ear listen <small class="text-muted">&ltchannel&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseNine" class="collapse" aria-labelledby="listen" data-parent="#accordion">
-                                <div class="card-body">
-                                    The bot will resume responding to commands from the channel.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="loop">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
-                                        aria-expanded="true" aria-controls="collapseTen">
-                                        <div class="card-h">ear loop <small class="text-muted">[song/queue]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTen" class="collapse" aria-labelledby="loop" data-parent="#accordion">
-                                <div class="card-body">
-                                    Loops the current queue/song.
-                                    </br></br>Aliases: <kbd>repeat</kbd>, <kbd>loopqueue</kbd>, <kbd>unloop</kbd>, <kbd>queueloop</kbd>,
-                                    <kbd>repeatqueue</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="normal">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven"
-                                        aria-expanded="true" aria-controls="collapseEleven">
-                                        <div class="card-h">ear normal</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseEleven" class="collapse" aria-labelledby="normal" data-parent="#accordion">
-                                <div class="card-body">
-                                    Resets the volume of the current playing song.
-                                    </br></br>Aliases: <kbd>reset</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="nowplaying">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwelve"
-                                        aria-expanded="true" aria-controls="collapseTwelve">
-                                        <div class="card-h">ear nowplaying</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwelve" class="collapse" aria-labelledby="nowplaying" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the current playing song.
-                                    </br></br>Aliases: <kbd>playing</kbd>, <kbd>np</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="pause">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen"
-                                        aria-expanded="true" aria-controls="collapseThirteen">
-                                        <div class="card-h">ear pause</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThirteen" class="collapse" aria-labelledby="pause" data-parent="#accordion">
-                                <div class="card-body">
-                                    Pauses the current playing song.
-                                    </br></br>Aliases: <kbd>resume</kbd>, <kbd>stop</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="ping">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse14"
-                                        aria-expanded="true" aria-controls="collapse14">
-                                        <div class="card-h">ear ping</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse14" class="collapse" aria-labelledby="ping" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the bot's latency.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="play">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15"
-                                        aria-expanded="true" aria-controls="collapse15">
-                                        <div class="card-h">ear play <small class="text-muted">&ltlink/song&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse15" class="collapse" aria-labelledby="play" data-parent="#accordion">
-                                <div class="card-body">
-                                    Plays a song from Youtube.
-                                    </br></br>Aliases: <kbd>p</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="prefix">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse16"
-                                        aria-expanded="true" aria-controls="collapse16">
-                                        <div class="card-h">ear prefix <small class="text-muted">[prefix]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
-                                <div class="card-body">
-                                    Shows the current prefix of the server, and sets the prefix of the server.
-                                    </br></br>Aliases: <kbd>p</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="queue">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse17"
-                                        aria-expanded="true" aria-controls="collapse17">
-                                        <div class="card-h">ear queue</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse17" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the queue and the current playing song.
-                                    </br></br>Aliases: <kbd>q</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="remove">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse18"
-                                        aria-expanded="true" aria-controls="collapse18">
-                                        <div class="card-h">ear remove <small class="text-muted">&ltsong position&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse18" class="collapse" aria-labelledby="remove" data-parent="#accordion">
-                                <div class="card-body">
-                                    Removes a song from the queue.
-                                    </br></br>Aliases: <kbd>delete</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="replay">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse19"
-                                        aria-expanded="true" aria-controls="collapse19">
-                                        <div class="card-h">ear replay</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse19" class="collapse" aria-labelledby="replay" data-parent="#accordion">
-                                <div class="card-body">
-                                    Starts the current playing song from the beginning.
-                                    </br></br>Aliases: <kbd>delete</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="resume">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseResume"
-                                        aria-expanded="true" aria-controls="collapseResume">
-                                        <div class="card-h">ear resume</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseResume" class="collapse" aria-labelledby="resume" data-parent="#accordion">
-                                <div class="card-body">
-                                    Resumes the current playing song.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="rewind">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse199"
-                                        aria-expanded="true" aria-controls="collapse199">
-                                        <div class="card-h">ear rewind <small class="text-muted">[seconds]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse199" class="collapse" aria-labelledby="replay" data-parent="#accordion">
-                                <div class="card-body">
-                                    Rewinds the current playing song. Default is 10 seconds.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="search">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse20"
-                                        aria-expanded="true" aria-controls="collapse20">
-                                        <div class="card-h">ear search <small class="text-muted">&ltsong&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse20" class="collapse" aria-labelledby="search" data-parent="#accordion">
-                                <div class="card-body">
-                                    Provides a variety of search results for a song.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="seek">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse21"
-                                        aria-expanded="true" aria-controls="collapse21">
-                                        <div class="card-h">ear seek <small class="text-muted">&ltseconds&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse21" class="collapse" aria-labelledby="seek" data-parent="#accordion">
-                                <div class="card-body">
-                                    Skips to the timestamp in the song.
-                                    </br></br>Aliases: <kbd>skipto</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="shuffle">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse22"
-                                        aria-expanded="true" aria-controls="collapse22">
-                                        <div class="card-h">ear shuffle</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse22" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
-                                <div class="card-body">
-                                    Shuffles the queue.
-                                    </br></br>Aliases: <kbd>mix</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="skip">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse23"
-                                        aria-expanded="true" aria-controls="collapse23">
-                                        <div class="card-h">ear skip</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse23" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
-                                <div class="card-body">
-                                    Skips the current playing song.
-                                    </br></br>Aliases: <kbd>s</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="stats">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse24"
-                                        aria-expanded="true" aria-controls="collapse24">
-                                        <div class="card-h">ear stats</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse24" class="collapse" aria-labelledby="stats" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the bot's stats.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="volume">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25"
-                                        aria-expanded="true" aria-controls="collapse25">
-                                        <div class="card-h">ear volume <small class="text-muted">&ltamount&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to reset the volume to
-                                    default (100).
-                                </div>
-                            </div>
-                        </div>
-                
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="list-music" role="tabpanel" aria-labelledby="list-music-list">
-                    <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
-                        <div class="card">
-                            <div class="card-header" id="bassboost">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="true" aria-controls="collapseOne">
-                                        <div class="card-h">ear bassboost <small class="text-muted">[amount]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="bassboost" data-parent="#accordion">
-                                <div class="card-body">
-                                    Bassboosts the current playing song (amount can be between -10 - 10). Type <kbd>ear bassboost
-                                        off</kbd> to turn off the bassboost.
-                                    </br></br>Aliases: <kbd>bb</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="clear">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                        aria-expanded="true" aria-controls="collapseTwo">
-                                        <div class="card-h">ear clear</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwo" class="collapse" aria-labelledby="clear" data-parent="#accordion">
-                                <div class="card-body">
-                                    Clears the entire queue.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="earrape">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                        aria-expanded="true" aria-controls="collapseThree">
-                                        <div class="card-h">ear earrape</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="earrape" data-parent="#accordion">
-                                <div class="card-body">
-                                    Earrapes the current playing song
-                                    </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="forward">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
-                                        aria-expanded="true" aria-controls="collapseFour">
-                                        <div class="card-h">ear fastforward <small class="text-muted">[seconds]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseFour" class="collapse" aria-labelledby="forard" data-parent="#accordion">
-                                <div class="card-body">
-                                    Fast forwards the current playing song. Default is 10 seconds.
-                                    </br></br>Aliases: <kbd>forward</kbd>, <kbd>ff</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="join">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSeven"
-                                        aria-expanded="true" aria-controls="collapseSeven">
-                                        <div class="card-h">ear join</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseSeven" class="collapse" aria-labelledby="join" data-parent="#accordion">
-                                <div class="card-body">
-                                    Joins the voice channel you are currently in.
-                                    </br></br>Aliases: <kbd>summon</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="leave">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight"
-                                        aria-expanded="true" aria-controls="collapseEight">
-                                        <div class="card-h">ear leave</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseEight" class="collapse" aria-labelledby="leave" data-parent="#accordion">
-                                <div class="card-body">
-                                    The bot leaves the voice channel it is currently in.
-                                    </br></br>Aliases: <kbd>disconnect</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="loop">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTen"
-                                        aria-expanded="true" aria-controls="collapseTen">
-                                        <div class="card-h">ear loop <small class="text-muted">[song/queue]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTen" class="collapse" aria-labelledby="loop" data-parent="#accordion">
-                                <div class="card-body">
-                                    Loops the current queue/song.
-                                    </br></br>Aliases: <kbd>repeat</kbd>, <kbd>loopqueue</kbd>, <kbd>unloop</kbd>, <kbd>queueloop</kbd>,
-                                    <kbd>repeatqueue</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="normal">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven"
-                                        aria-expanded="true" aria-controls="collapseEleven">
-                                        <div class="card-h">ear normal</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseEleven" class="collapse" aria-labelledby="normal" data-parent="#accordion">
-                                <div class="card-body">
-                                    Resets the volume of the current playing song.
-                                    </br></br>Aliases: <kbd>reset</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="nowplaying">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwelve"
-                                        aria-expanded="true" aria-controls="collapseTwelve">
-                                        <div class="card-h">ear nowplaying</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseTwelve" class="collapse" aria-labelledby="nowplaying" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the current playing song.
-                                    </br></br>Aliases: <kbd>playing</kbd>, <kbd>np</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="pause">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThirteen"
-                                        aria-expanded="true" aria-controls="collapseThirteen">
-                                        <div class="card-h">ear pause</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThirteen" class="collapse" aria-labelledby="pause" data-parent="#accordion">
-                                <div class="card-body">
-                                    Pauses the current playing song.
-                                    </br></br>Aliases: <kbd>resume</kbd>, <kbd>stop</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="play">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse15"
-                                        aria-expanded="true" aria-controls="collapse15">
-                                        <div class="card-h">ear play <small class="text-muted">&ltlink/song&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse15" class="collapse" aria-labelledby="play" data-parent="#accordion">
-                                <div class="card-body">
-                                    Plays a song from Youtube.
-                                    </br></br>Aliases: <kbd>p</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="queue">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse17"
-                                        aria-expanded="true" aria-controls="collapse17">
-                                        <div class="card-h">ear queue</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse17" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the queue and the current playing song.
-                                    </br></br>Aliases: <kbd>q</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="remove">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse18"
-                                        aria-expanded="true" aria-controls="collapse18">
-                                        <div class="card-h">ear remove <small class="text-muted">&ltsong position&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse18" class="collapse" aria-labelledby="remove" data-parent="#accordion">
-                                <div class="card-body">
-                                    Removes a song from the queue.
-                                    </br></br>Aliases: <kbd>delete</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="replay">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse19"
-                                        aria-expanded="true" aria-controls="collapse19">
-                                        <div class="card-h">ear replay</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse19" class="collapse" aria-labelledby="replay" data-parent="#accordion">
-                                <div class="card-body">
-                                    Starts the current playing song from the beginning.
-                                    </br></br>Aliases: <kbd>delete</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="resume">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseResume"
-                                        aria-expanded="true" aria-controls="collapseResume">
-                                        <div class="card-h">ear resume</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseResume" class="collapse" aria-labelledby="resume" data-parent="#accordion">
-                                <div class="card-body">
-                                    Resumes the current playing song.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="rewind">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse199"
-                                        aria-expanded="true" aria-controls="collapse199">
-                                        <div class="card-h">ear rewind <small class="text-muted">[seconds]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse199" class="collapse" aria-labelledby="replay" data-parent="#accordion">
-                                <div class="card-body">
-                                    Rewinds the current playing song. Default is 10 seconds.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="search">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse20"
-                                        aria-expanded="true" aria-controls="collapse20">
-                                        <div class="card-h">ear search <small class="text-muted">&ltsong&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse20" class="collapse" aria-labelledby="search" data-parent="#accordion">
-                                <div class="card-body">
-                                    Provides a variety of search results for a song.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="seek">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse21"
-                                        aria-expanded="true" aria-controls="collapse21">
-                                        <div class="card-h">ear seek <small class="text-muted">&ltseconds&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse21" class="collapse" aria-labelledby="seek" data-parent="#accordion">
-                                <div class="card-body">
-                                    Skips to the timestamp in the song.
-                                    </br></br>Aliases: <kbd>skipto</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="shuffle">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse22"
-                                        aria-expanded="true" aria-controls="collapse22">
-                                        <div class="card-h">ear shuffle</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse22" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
-                                <div class="card-body">
-                                    Shuffles the queue.
-                                    </br></br>Aliases: <kbd>mix</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="skip">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse23"
-                                        aria-expanded="true" aria-controls="collapse23">
-                                        <div class="card-h">ear skip</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse23" class="collapse" aria-labelledby="shuffle" data-parent="#accordion">
-                                <div class="card-body">
-                                    Skips the current playing song.
-                                    </br></br>Aliases: <kbd>s</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="volume">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25"
-                                        aria-expanded="true" aria-controls="collapse25">
-                                        <div class="card-h">ear volume <small class="text-muted">&ltamount&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to reset the volume to
-                                    default (100).
-                                </div>
-                            </div>
-                        </div>
-                
-                    </div>
-                </div>
-                <div class="tab-pane fade" id="list-filters" role="tabpanel" aria-labelledby="list-filters-list">
-                    <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
-                        <div class="card">
-                            <div class="card-header" id="bassboost">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne"
-                                        aria-expanded="true" aria-controls="collapseOne">
-                                        <div class="card-h">ear bassboost <small class="text-muted">[amount]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseOne" class="collapse" aria-labelledby="bassboost" data-parent="#accordion">
-                                <div class="card-body">
-                                    Bassboosts the current playing song (amount can be between -10 - 10). Type <kbd>ear bassboost
-                                        off</kbd> to turn off the bassboost.
-                                    </br></br>Aliases: <kbd>bb</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="earrape">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                                        aria-expanded="true" aria-controls="collapseThree">
-                                        <div class="card-h">ear earrape</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseThree" class="collapse" aria-labelledby="earrape" data-parent="#accordion">
-                                <div class="card-body">
-                                    Earrapes the current playing song
-                                    </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="normal">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEleven"
-                                        aria-expanded="true" aria-controls="collapseEleven">
-                                        <div class="card-h">ear normal</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseEleven" class="collapse" aria-labelledby="normal" data-parent="#accordion">
-                                <div class="card-body">
-                                    Resets the volume of the current playing song.
-                                    </br></br>Aliases: <kbd>reset</kbd>
-                                </div>
-                            </div>
-                        </div>
+    </div>
 
-                        <div class="card">
-                            <div class="card-header" id="volume">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse25"
-                                        aria-expanded="true" aria-controls="collapse25">
-                                        <div class="card-h">ear volume <small class="text-muted">&ltamount&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to reset the volume to
-                                    default (100).
-                                </div>
-                            </div>
-                        </div>
-                
-                    </div>
+    <div class="landscape">
+        <div class="row">
+            <div class="col-2" style="padding-left: 6%;">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-all2-list" data-toggle="list"
+                        href="#list-all2" role="tab" aria-controls="all2">
+                        <div class="list-h">All</div>
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-music2-list" data-toggle="list"
+                        href="#list-music2" role="tab" aria-controls="music2">
+                        <div class="list-h">Music</div>
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-filters2-list" data-toggle="list"
+                        href="#list-filters2" role="tab" aria-controls="filters2">
+                        <div class="list-h">Audio Filters</div>
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-settings2-list" data-toggle="list"
+                        href="#list-settings2" role="tab" aria-controls="settings2">
+                        <div class="list-h">Settings</div>
+                    </a>
+                    <a class="list-group-item list-group-item-action" id="list-info2-list" data-toggle="list"
+                        href="#list-info2" role="tab" aria-controls="info2">
+                        <div class="list-h">Bot Info</div>
+                    </a>
                 </div>
-                <div class="tab-pane fade" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
-                    <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
-                        <div class="card">
-                            <div class="card-header" id="ignore">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseSix"
-                                        aria-expanded="true" aria-controls="collapseSix">
-                                        <div class="card-h">ear ignore <small class="text-muted">&ltchannel&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseSix" class="collapse" aria-labelledby="ignore" data-parent="#accordion">
-                                <div class="card-body">
-                                    Stops the bot from responding to commands from the channel channel.
+            </div>
+            <div class="col-10">
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-all2" role="tabpanel"
+                        aria-labelledby="list-all-list">
+                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                            <div class="card">
+                                <div class="card-header" id="bassboost">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="card-h">ear bassboost <small class="text-muted">[amount]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="bassboost"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Bassboosts the current playing song (amount can be between -10 - 10). Type
+                                        <kbd>ear bassboost
+                                            off</kbd> to turn off the bassboost.
+                                        </br></br>Aliases: <kbd>bb</kbd>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="listen">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseNine"
-                                        aria-expanded="true" aria-controls="collapseNine">
-                                        <div class="card-h">ear listen <small class="text-muted">&ltchannel&gt</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapseNine" class="collapse" aria-labelledby="listen" data-parent="#accordion">
-                                <div class="card-body">
-                                    The bot will resume responding to commands from the channel.
+
+                            <div class="card">
+                                <div class="card-header" id="clear">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            <div class="card-h">ear clear</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="clear" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Clears the entire queue.
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="prefix">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse16"
-                                        aria-expanded="true" aria-controls="collapse16">
-                                        <div class="card-h">ear prefix <small class="text-muted">[prefix]</small></div>
-                                    </button>
-                                </h5>
+
+                            <div class="card">
+                                <div class="card-header" id="earrape">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="true"
+                                            aria-controls="collapseThree">
+                                            <div class="card-h">ear earrape</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="earrape"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Earrapes the current playing song
+                                        </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
-                                <div class="card-body">
-                                    Shows the current prefix of the server, and sets the prefix of the server.
-                                    </br></br>Aliases: <kbd>p</kbd>
+
+                            <div class="card">
+                                <div class="card-header" id="forward">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseFour" aria-expanded="true"
+                                            aria-controls="collapseFour">
+                                            <div class="card-h">ear fastforward <small
+                                                    class="text-muted">[seconds]</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="forard"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Fast forwards the current playing song. Default is 10 seconds.
+                                        </br></br>Aliases: <kbd>forward</kbd>, <kbd>ff</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="help">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseFive" aria-expanded="true"
+                                            aria-controls="collapseFive">
+                                            <div class="card-h">ear help</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="help" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Sends a list of the bot's commands and information.
+                                        </br></br>Aliases: <kbd>commands</kbd>, <kbd>list</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="ignore">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                            <div class="card-h">ear ignore <small
+                                                    class="text-muted">&ltchannel&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="ignore"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Stops the bot from responding to commands from the channel channel.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="join">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseSeven" aria-expanded="true"
+                                            aria-controls="collapseSeven">
+                                            <div class="card-h">ear join</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="join"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Joins the voice channel you are currently in.
+                                        </br></br>Aliases: <kbd>summon</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="leave">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseEight" aria-expanded="true"
+                                            aria-controls="collapseEight">
+                                            <div class="card-h">ear leave</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="leave"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        The bot leaves the voice channel it is currently in.
+                                        </br></br>Aliases: <kbd>disconnect</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="listen">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseNine" aria-expanded="true"
+                                            aria-controls="collapseNine">
+                                            <div class="card-h">ear listen <small
+                                                    class="text-muted">&ltchannel&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseNine" class="collapse" aria-labelledby="listen"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        The bot will resume responding to commands from the channel.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="loop">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                                            <div class="card-h">ear loop <small class="text-muted">[song/queue]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTen" class="collapse" aria-labelledby="loop" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Loops the current queue/song.
+                                        </br></br>Aliases: <kbd>repeat</kbd>, <kbd>loopqueue</kbd>, <kbd>unloop</kbd>,
+                                        <kbd>queueloop</kbd>,
+                                        <kbd>repeatqueue</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="normal">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseEleven" aria-expanded="true"
+                                            aria-controls="collapseEleven">
+                                            <div class="card-h">ear normal</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseEleven" class="collapse" aria-labelledby="normal"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Resets the volume of the current playing song.
+                                        </br></br>Aliases: <kbd>reset</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="nowplaying">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwelve" aria-expanded="true"
+                                            aria-controls="collapseTwelve">
+                                            <div class="card-h">ear nowplaying</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwelve" class="collapse" aria-labelledby="nowplaying"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the current playing song.
+                                        </br></br>Aliases: <kbd>playing</kbd>, <kbd>np</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="pause">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseThirteen" aria-expanded="true"
+                                            aria-controls="collapseThirteen">
+                                            <div class="card-h">ear pause</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThirteen" class="collapse" aria-labelledby="pause"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Pauses the current playing song.
+                                        </br></br>Aliases: <kbd>resume</kbd>, <kbd>stop</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="ping">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">
+                                            <div class="card-h">ear ping</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse14" class="collapse" aria-labelledby="ping" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the bot's latency.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="play">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+                                            <div class="card-h">ear play <small
+                                                    class="text-muted">&ltlink/song&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse15" class="collapse" aria-labelledby="play" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Plays a song from Youtube.
+                                        </br></br>Aliases: <kbd>p</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="prefix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+                                            <div class="card-h">ear prefix <small class="text-muted">[prefix]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Shows the current prefix of the server, and sets the prefix of the server.
+                                        </br></br>Aliases: <kbd>p</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="queue">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+                                            <div class="card-h">ear queue</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse17" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the queue and the current playing song.
+                                        </br></br>Aliases: <kbd>q</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="remove">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse18" aria-expanded="true" aria-controls="collapse18">
+                                            <div class="card-h">ear remove <small class="text-muted">&ltsong
+                                                    position&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse18" class="collapse" aria-labelledby="remove" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Removes a song from the queue.
+                                        </br></br>Aliases: <kbd>delete</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="replay">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse19" aria-expanded="true" aria-controls="collapse19">
+                                            <div class="card-h">ear replay</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse19" class="collapse" aria-labelledby="replay" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Starts the current playing song from the beginning.
+                                        </br></br>Aliases: <kbd>delete</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="resume">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseResume" aria-expanded="true"
+                                            aria-controls="collapseResume">
+                                            <div class="card-h">ear resume</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseResume" class="collapse" aria-labelledby="resume"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Resumes the current playing song.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="rewind">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse199" aria-expanded="true" aria-controls="collapse199">
+                                            <div class="card-h">ear rewind <small class="text-muted">[seconds]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse199" class="collapse" aria-labelledby="replay"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Rewinds the current playing song. Default is 10 seconds.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="search">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse20" aria-expanded="true" aria-controls="collapse20">
+                                            <div class="card-h">ear search <small class="text-muted">&ltsong&gt</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse20" class="collapse" aria-labelledby="search" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Provides a variety of search results for a song.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="seek">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+                                            <div class="card-h">ear seek <small class="text-muted">&ltseconds&gt</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse21" class="collapse" aria-labelledby="seek" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Skips to the timestamp in the song.
+                                        </br></br>Aliases: <kbd>skipto</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="shuffle">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse22" aria-expanded="true" aria-controls="collapse22">
+                                            <div class="card-h">ear shuffle</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse22" class="collapse" aria-labelledby="shuffle"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Shuffles the queue.
+                                        </br></br>Aliases: <kbd>mix</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="skip">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse23" aria-expanded="true" aria-controls="collapse23">
+                                            <div class="card-h">ear skip</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse23" class="collapse" aria-labelledby="shuffle"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Skips the current playing song.
+                                        </br></br>Aliases: <kbd>s</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="stats">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse24" aria-expanded="true" aria-controls="collapse24">
+                                            <div class="card-h">ear stats</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse24" class="collapse" aria-labelledby="stats" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the bot's stats.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="volume">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse25" aria-expanded="true" aria-controls="collapse25">
+                                            <div class="card-h">ear volume <small
+                                                    class="text-muted">&ltamount&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to
+                                        reset the volume to
+                                        default (100).
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-music2" role="tabpanel" aria-labelledby="list-music-list">
+                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                            <div class="card">
+                                <div class="card-header" id="bassboost">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="card-h">ear bassboost <small class="text-muted">[amount]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="bassboost"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Bassboosts the current playing song (amount can be between -10 - 10). Type
+                                        <kbd>ear bassboost
+                                            off</kbd> to turn off the bassboost.
+                                        </br></br>Aliases: <kbd>bb</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="clear">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                            <div class="card-h">ear clear</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwo" class="collapse" aria-labelledby="clear" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Clears the entire queue.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="earrape">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="true"
+                                            aria-controls="collapseThree">
+                                            <div class="card-h">ear earrape</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="earrape"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Earrapes the current playing song
+                                        </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="forward">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseFour" aria-expanded="true"
+                                            aria-controls="collapseFour">
+                                            <div class="card-h">ear fastforward <small
+                                                    class="text-muted">[seconds]</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFour" class="collapse" aria-labelledby="forard"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Fast forwards the current playing song. Default is 10 seconds.
+                                        </br></br>Aliases: <kbd>forward</kbd>, <kbd>ff</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="join">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseSeven" aria-expanded="true"
+                                            aria-controls="collapseSeven">
+                                            <div class="card-h">ear join</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSeven" class="collapse" aria-labelledby="join"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Joins the voice channel you are currently in.
+                                        </br></br>Aliases: <kbd>summon</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="leave">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseEight" aria-expanded="true"
+                                            aria-controls="collapseEight">
+                                            <div class="card-h">ear leave</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseEight" class="collapse" aria-labelledby="leave"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        The bot leaves the voice channel it is currently in.
+                                        </br></br>Aliases: <kbd>disconnect</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="loop">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTen" aria-expanded="true" aria-controls="collapseTen">
+                                            <div class="card-h">ear loop <small class="text-muted">[song/queue]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTen" class="collapse" aria-labelledby="loop" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Loops the current queue/song.
+                                        </br></br>Aliases: <kbd>repeat</kbd>, <kbd>loopqueue</kbd>, <kbd>unloop</kbd>,
+                                        <kbd>queueloop</kbd>,
+                                        <kbd>repeatqueue</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="normal">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseEleven" aria-expanded="true"
+                                            aria-controls="collapseEleven">
+                                            <div class="card-h">ear normal</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseEleven" class="collapse" aria-labelledby="normal"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Resets the volume of the current playing song.
+                                        </br></br>Aliases: <kbd>reset</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="nowplaying">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseTwelve" aria-expanded="true"
+                                            aria-controls="collapseTwelve">
+                                            <div class="card-h">ear nowplaying</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseTwelve" class="collapse" aria-labelledby="nowplaying"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the current playing song.
+                                        </br></br>Aliases: <kbd>playing</kbd>, <kbd>np</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="pause">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseThirteen" aria-expanded="true"
+                                            aria-controls="collapseThirteen">
+                                            <div class="card-h">ear pause</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThirteen" class="collapse" aria-labelledby="pause"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Pauses the current playing song.
+                                        </br></br>Aliases: <kbd>resume</kbd>, <kbd>stop</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="play">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+                                            <div class="card-h">ear play <small
+                                                    class="text-muted">&ltlink/song&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse15" class="collapse" aria-labelledby="play" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Plays a song from Youtube.
+                                        </br></br>Aliases: <kbd>p</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="queue">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+                                            <div class="card-h">ear queue</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse17" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the queue and the current playing song.
+                                        </br></br>Aliases: <kbd>q</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="remove">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse18" aria-expanded="true" aria-controls="collapse18">
+                                            <div class="card-h">ear remove <small class="text-muted">&ltsong
+                                                    position&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse18" class="collapse" aria-labelledby="remove" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Removes a song from the queue.
+                                        </br></br>Aliases: <kbd>delete</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="replay">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse19" aria-expanded="true" aria-controls="collapse19">
+                                            <div class="card-h">ear replay</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse19" class="collapse" aria-labelledby="replay" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Starts the current playing song from the beginning.
+                                        </br></br>Aliases: <kbd>delete</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="resume">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseResume" aria-expanded="true"
+                                            aria-controls="collapseResume">
+                                            <div class="card-h">ear resume</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseResume" class="collapse" aria-labelledby="resume"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Resumes the current playing song.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="rewind">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse199" aria-expanded="true" aria-controls="collapse199">
+                                            <div class="card-h">ear rewind <small class="text-muted">[seconds]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse199" class="collapse" aria-labelledby="replay"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Rewinds the current playing song. Default is 10 seconds.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="search">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse20" aria-expanded="true" aria-controls="collapse20">
+                                            <div class="card-h">ear search <small class="text-muted">&ltsong&gt</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse20" class="collapse" aria-labelledby="search" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Provides a variety of search results for a song.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="seek">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse21" aria-expanded="true" aria-controls="collapse21">
+                                            <div class="card-h">ear seek <small class="text-muted">&ltseconds&gt</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse21" class="collapse" aria-labelledby="seek" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Skips to the timestamp in the song.
+                                        </br></br>Aliases: <kbd>skipto</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="shuffle">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse22" aria-expanded="true" aria-controls="collapse22">
+                                            <div class="card-h">ear shuffle</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse22" class="collapse" aria-labelledby="shuffle"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Shuffles the queue.
+                                        </br></br>Aliases: <kbd>mix</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="skip">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse23" aria-expanded="true" aria-controls="collapse23">
+                                            <div class="card-h">ear skip</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse23" class="collapse" aria-labelledby="shuffle"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Skips the current playing song.
+                                        </br></br>Aliases: <kbd>s</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="volume">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse25" aria-expanded="true" aria-controls="collapse25">
+                                            <div class="card-h">ear volume <small
+                                                    class="text-muted">&ltamount&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to
+                                        reset the volume to
+                                        default (100).
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-filters2" role="tabpanel" aria-labelledby="list-filters-list">
+                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                            <div class="card">
+                                <div class="card-header" id="bassboost">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            <div class="card-h">ear bassboost <small class="text-muted">[amount]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseOne" class="collapse" aria-labelledby="bassboost"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Bassboosts the current playing song (amount can be between -10 - 10). Type
+                                        <kbd>ear bassboost
+                                            off</kbd> to turn off the bassboost.
+                                        </br></br>Aliases: <kbd>bb</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="earrape">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseThree" aria-expanded="true"
+                                            aria-controls="collapseThree">
+                                            <div class="card-h">ear earrape</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="earrape"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Earrapes the current playing song
+                                        </br></br>Aliases: <kbd>veryloud</kbd>, <kbd>hell</kbd>, <kbd>loud</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="normal">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseEleven" aria-expanded="true"
+                                            aria-controls="collapseEleven">
+                                            <div class="card-h">ear normal</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseEleven" class="collapse" aria-labelledby="normal"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Resets the volume of the current playing song.
+                                        </br></br>Aliases: <kbd>reset</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="volume">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse25" aria-expanded="true" aria-controls="collapse25">
+                                            <div class="card-h">ear volume <small
+                                                    class="text-muted">&ltamount&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse25" class="collapse" aria-labelledby="volume" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Sets the volume of the current playing song. Type <kbd>ear volume reset</kbd> to
+                                        reset the volume to
+                                        default (100).
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="list-settings2" role="tabpanel" aria-labelledby="list-settings-list">
+                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                            <div class="card">
+                                <div class="card-header" id="ignore">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                                            <div class="card-h">ear ignore <small
+                                                    class="text-muted">&ltchannel&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseSix" class="collapse" aria-labelledby="ignore"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        Stops the bot from responding to commands from the channel channel.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="listen">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseNine" aria-expanded="true"
+                                            aria-controls="collapseNine">
+                                            <div class="card-h">ear listen <small
+                                                    class="text-muted">&ltchannel&gt</small></div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseNine" class="collapse" aria-labelledby="listen"
+                                    data-parent="#accordion">
+                                    <div class="card-body">
+                                        The bot will resume responding to commands from the channel.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="prefix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+                                            <div class="card-h">ear prefix <small class="text-muted">[prefix]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Shows the current prefix of the server, and sets the prefix of the server.
+                                        </br></br>Aliases: <kbd>p</kbd>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="tab-pane fade" id="list-info" role="tabpanel" aria-labelledby="list-info-list">
-                    <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
-                
-                        <div class="card">
-                            <div class="card-header" id="help">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFive"
-                                        aria-expanded="true" aria-controls="collapseFive">
-                                        <div class="card-h">ear help</div>
-                                    </button>
-                                </h5>
+                    <div class="tab-pane fade" id="list-info2" role="tabpanel" aria-labelledby="list-info-list">
+                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+
+                            <div class="card">
+                                <div class="card-header" id="help">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapseFive" aria-expanded="true"
+                                            aria-controls="collapseFive">
+                                            <div class="card-h">ear help</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="help" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Sends a list of the bot's commands and information.
+                                        </br></br>Aliases: <kbd>commands</kbd>, <kbd>list</kbd>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="collapseFive" class="collapse" aria-labelledby="help" data-parent="#accordion">
-                                <div class="card-body">
-                                    Sends a list of the bot's commands and information.
-                                    </br></br>Aliases: <kbd>commands</kbd>, <kbd>list</kbd>
+
+                            <div class="card">
+                                <div class="card-header" id="ping">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse14" aria-expanded="true" aria-controls="collapse14">
+                                            <div class="card-h">ear ping</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse14" class="collapse" aria-labelledby="ping" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the bot's latency.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="prefix">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+                                            <div class="card-h">ear prefix <small class="text-muted">[prefix]</small>
+                                            </div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Shows the current prefix of the server, and sets the prefix of the server.
+                                        </br></br>Aliases: <kbd>p</kbd>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header" id="stats">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse"
+                                            data-target="#collapse24" aria-expanded="true" aria-controls="collapse24">
+                                            <div class="card-h">ear stats</div>
+                                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapse24" class="collapse" aria-labelledby="stats" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Displays the bot's stats.
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="ping">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse14"
-                                        aria-expanded="true" aria-controls="collapse14">
-                                        <div class="card-h">ear ping</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse14" class="collapse" aria-labelledby="ping" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the bot's latency.
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="prefix">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse16"
-                                        aria-expanded="true" aria-controls="collapse16">
-                                        <div class="card-h">ear prefix <small class="text-muted">[prefix]</small></div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse16" class="collapse" aria-labelledby="prefix" data-parent="#accordion">
-                                <div class="card-body">
-                                    Shows the current prefix of the server, and sets the prefix of the server.
-                                    </br></br>Aliases: <kbd>p</kbd>
-                                </div>
-                            </div>
-                        </div>
-                
-                        <div class="card">
-                            <div class="card-header" id="stats">
-                                <h5 class="mb-0">
-                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapse24"
-                                        aria-expanded="true" aria-controls="collapse24">
-                                        <div class="card-h">ear stats</div>
-                                    </button>
-                                </h5>
-                            </div>
-                            <div id="collapse24" class="collapse" aria-labelledby="stats" data-parent="#accordion">
-                                <div class="card-body">
-                                    Displays the bot's stats.
-                                </div>
-                            </div>
-                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 </body>
 
 </html>
