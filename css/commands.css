@@ -39,7 +39,7 @@
 }
 
 .commands-gradient {
-    height: 320vh;
+    height: 350vh;
     width: 99%;
     background-image: linear-gradient(360deg, rgb(72, 32, 114), rgb(18, 16, 78));
 }
@@ -56,8 +56,9 @@
 
 .card-h {
     padding-left: 0.5%;
+    width: 1000px;
     color: rgb(47, 47, 47);
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 600 !important;
 }
 
@@ -68,7 +69,7 @@
 }
 
 .text-muted {
-    font-size: 25px !important;
+    font-size: 20px !important;
     font-weight: 600 !important;
 }
 
@@ -89,4 +90,15 @@
     .mobile {
         display: block;
     }
+
+    .card-h {
+        width: 150px;
+        min-height:20%;
+        position: relative;
+    }
+
+    .mb-0 {
+        height: 75px;
+    }
+    
 }
