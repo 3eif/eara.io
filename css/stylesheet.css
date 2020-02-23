@@ -61,12 +61,7 @@ body {
 }
 
 .container {
-    padding: 15px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+    padding-top: 200px;
 } 
 
 .home-image {
@@ -76,11 +71,12 @@ body {
 
 h1 {
     font-size: 65px;
+    font-weight: 600;
     font-family: 'roboto-bold';
 }
 
 p {
     font-size: 25px;
-    font-weight: 350;
+    font-weight: 600 !important;
     font-family: 'roboto';
 }
