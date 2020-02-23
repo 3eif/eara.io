@@ -18,7 +18,22 @@
     padding: 15px;
 }
 
-.btn-link {
+.card-body {
+    color: rgb(47, 47, 47);
+    font-weight: 500 !important;
+    font-size: 18px;
+}
+
+.card-h {
+    padding-left: 0.5%;
+    width: 1000px;
+    color: rgb(47, 47, 47);
+    font-size: 20px;
+    font-weight: 600 !important;
+}
+
+
+.btn-linkk {
     height: 60px;
     width: 100%;
     color: #000 !important;
@@ -27,7 +42,7 @@
     text-decoration: none !important;
 }
 
-.btn-link:after {
+.btn-linkk:after {
     content: '\2212';
     text-align: center;
     width: 35px;
@@ -45,22 +60,8 @@
     background-image: linear-gradient(360deg, rgb(72, 32, 114), rgb(18, 16, 78));
 }
 
-.btn-link.collapsed:after {
+.btn-linkk.collapsed:after {
     content: '\002B';   
-}
-
-.card-body {
-    color: rgb(47, 47, 47);
-    font-weight: 500 !important;
-    font-size: 18px;
-}
-
-.card-h {
-    padding-left: 0.5%;
-    width: 1000px;
-    color: rgb(47, 47, 47);
-    font-size: 20px;
-    font-weight: 600 !important;
 }
 
 .list-h {
