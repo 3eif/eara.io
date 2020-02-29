@@ -1,7 +1,7 @@
 .background-gradient {
     height: 125vh;
     width: 99%;
-    background-image: linear-gradient(360deg, rgb(51, 17, 88), rgb(18, 16, 78));
+    background-image: linear-gradient(360deg, #1E1459, #02000E);
 }
 
 .btn-md {
