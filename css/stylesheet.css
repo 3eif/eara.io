@@ -18,13 +18,13 @@
 
 @font-face {
     font-family: 'roboto';
-    src: url(../fonts/SFAlienEncounters.ttf);
+    src: url(../fonts/Roboto-Thin.ttf);
     font-style: normal;
 }
 
 @font-face {
     font-family: 'roboto-bold';
-    src: url(../fonts/SFAlienEncountersSolid.ttf);
+    src: url(../fonts/Roboto-Regular.ttf);
     font-style: normal;
 }
 
