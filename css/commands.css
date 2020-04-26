@@ -54,10 +54,9 @@
     background: #e8eeff;
 }
 
-.commands-gradient {
-    height: 350vh;
+body {
     width: 99%;
-    background-image: linear-gradient(360deg, rgb(72, 32, 114), rgb(18, 16, 78));
+	background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(18,16,78,1) 0%, rgba(72,32,114,1) 100%) fixed;
 }
 
 .btn-linkk.collapsed:after {
