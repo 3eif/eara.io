@@ -59,6 +59,10 @@ body {
     color: white;
 }
 
+a:link {
+    text-decoration: none !important;
+} 
+
 .home-image {
     width: 300px;
     height: 300px;
