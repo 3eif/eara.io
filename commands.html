@@ -94,10 +94,9 @@
     </nav>
 
     <h1 style="text-align: center; padding: 3%; font-size: 50px;">Commands</h1>
-
-    <div class="landscape">
+    <div class="landscape container">
         <div class="row">
-            <div class="col-2" style="padding-left: 6%;">
+            <div class="col-sm-4" style="padding-bottom: 2%;">
                 <div class="list-group" id="list-tab" role="tablist">
                     <a class="list-group-item list-group-item-action active" id="list-all2-list" data-toggle="list"
                         href="#list-all2" role="tab" aria-controls="all2">
@@ -108,12 +107,12 @@
                         <div class="list-h">Music</div>
                     </a>
                     <a class="list-group-item list-group-item-action" id="list-sources2-list" data-toggle="list"
-                    href="#list-sources2" role="tab" aria-controls="sources2">
-                    <div class="list-h">Sources</div>
-                </a>
+                        href="#list-sources2" role="tab" aria-controls="sources2">
+                        <div class="list-h">Sources</div>
+                    </a>
                     <a class="list-group-item list-group-item-action" id="list-filters2-list" data-toggle="list"
                         href="#list-filters2" role="tab" aria-controls="filters2">
-                        <div class="list-h">Audio Filters</div>
+                        <div class="list-h">Filters</div>
                     </a>
                     <a class="list-group-item list-group-item-action" id="list-favorites2-list" data-toggle="list"
                         href="#list-favorites2" role="tab" aria-controls="favorites2">
@@ -129,11 +128,11 @@
                     </a>
                 </div>
             </div>
-            <div class="col-10">
+            <div class="col-sm-8">
                 <div class="tab-content" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="list-all2" role="tabpanel"
                         aria-labelledby="list-all-list">
-                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                        <div id="accordion">
                             <div class="card">
                                 <div class="card-header" id="donate">
                                     <h5 class="mb-0">
@@ -165,7 +164,8 @@
                                 <div id="collapsehelp" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Sends you a dm of detailed list of Ear Tensifier's commands.</br></br>Aliases:
+                                        Sends you a dm of detailed list of Ear Tensifier's
+                                        commands.</br></br>Aliases:
                                         <kbd>commands, list</kbd></div>
                                 </div>
                             </div>
@@ -263,7 +263,8 @@
                                 <div id="collapsesupport" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Sends the support server for the bot.</br></br>Aliases: <kbd>server</kbd></div>
+                                        Sends the support server for the bot.</br></br>Aliases: <kbd>server</kbd>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -320,7 +321,8 @@
                                         <button class="btn btn-linkk collapsed" data-toggle="collapse"
                                             data-target="#collapsedelete" aria-expanded="true"
                                             aria-controls="collapseSix">
-                                            <div class="card-h">ear delete <small class="text-muted">&ltsong position&gt
+                                            <div class="card-h">ear delete <small class="text-muted">&ltsong
+                                                    position&gt
                                                     or all</small></div>
                                         </button>
                                     </h5>
@@ -385,7 +387,8 @@
                                         <button class="btn btn-linkk collapsed" data-toggle="collapse"
                                             data-target="#collapsebassboost" aria-expanded="true"
                                             aria-controls="collapseSix">
-                                            <div class="card-h">ear bassboost <small class="text-muted">&ltamount (-10 -
+                                            <div class="card-h">ear bassboost <small class="text-muted">&ltamount
+                                                    (-10 -
                                                     10)&gt</small></div>
                                         </button>
                                     </h5>
@@ -425,7 +428,8 @@
                                 <div id="collapseequalizer" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Sets the equalizer of the current playing song.</br></br>Aliases: <kbd>eq</kbd>
+                                        Sets the equalizer of the current playing song.</br></br>Aliases:
+                                        <kbd>eq</kbd>
                                     </div>
                                 </div>
                             </div>
@@ -556,7 +560,8 @@
                                 <div id="collapsejoin" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Joins the voice channel you are in.</br></br>Aliases: <kbd>summon</kbd></div>
+                                        Joins the voice channel you are in.</br></br>Aliases: <kbd>summon</kbd>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -590,7 +595,8 @@
                                 <div id="collapseloop" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Repeats the current queue/song</br></br>Aliases: <kbd>repeat, unloop</kbd></div>
+                                        Repeats the current queue/song</br></br>Aliases: <kbd>repeat, unloop</kbd>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -616,7 +622,8 @@
                                         <button class="btn btn-linkk collapsed" data-toggle="collapse"
                                             data-target="#collapsemove" aria-expanded="true"
                                             aria-controls="collapseSix">
-                                            <div class="card-h">ear move <small class="text-muted">&ltold position&gt
+                                            <div class="card-h">ear move <small class="text-muted">&ltold
+                                                    position&gt
                                                     <new position></small></div>
                                         </button>
                                     </h5>
@@ -691,7 +698,8 @@
                                 <div id="collapseplayskip" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Skips the current playing song and immediately plays the song provided.</div>
+                                        Skips the current playing song and immediately plays the song provided.
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -723,7 +731,8 @@
                                 <div id="collapsequeueloop" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Loops the queue</br></br>Aliases: <kbd>loopqueue, repeatqueue, queuerepeat</kbd>
+                                        Loops the queue</br></br>Aliases: <kbd>loopqueue, repeatqueue,
+                                            queuerepeat</kbd>
                                     </div>
                                 </div>
                             </div>
@@ -1051,7 +1060,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-music2" role="tabpanel" aria-labelledby="list-music-list">
-                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                        <div id="accordion">
                             <div class="card">
                                 <div class="card-header" id="charts">
                                     <h5 class="mb-0">
@@ -1117,7 +1126,8 @@
                                 <div id="collapsejoin" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Joins the voice channel you are in.</br></br>Aliases: <kbd>summon</kbd></div>
+                                        Joins the voice channel you are in.</br></br>Aliases: <kbd>summon</kbd>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -1152,7 +1162,8 @@
                                 <div id="collapseloop" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Repeats the current queue/song</br></br>Aliases: <kbd>repeat, unloop</kbd></div>
+                                        Repeats the current queue/song</br></br>Aliases: <kbd>repeat, unloop</kbd>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -1178,7 +1189,8 @@
                                         <button class="btn btn-linkk collapsed" data-toggle="collapse"
                                             data-target="#collapsemove" aria-expanded="true"
                                             aria-controls="collapseSix">
-                                            <div class="card-h">ear move <small class="text-muted">&ltold position&gt
+                                            <div class="card-h">ear move <small class="text-muted">&ltold
+                                                    position&gt
                                                     <new position></small></div>
                                         </button>
                                     </h5>
@@ -1254,7 +1266,8 @@
                                 <div id="collapseplayskip" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Skips the current playing song and immediately plays the song provided.</div>
+                                        Skips the current playing song and immediately plays the song provided.
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -1286,7 +1299,8 @@
                                 <div id="collapsequeueloop" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Loops the queue</br></br>Aliases: <kbd>loopqueue, repeatqueue, queuerepeat</kbd>
+                                        Loops the queue</br></br>Aliases: <kbd>loopqueue, repeatqueue,
+                                            queuerepeat</kbd>
                                     </div>
                                 </div>
                             </div>
@@ -1447,7 +1461,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-sources2" role="tabpanel" aria-labelledby="list-music-list">
-                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                        <div id="accordion">
                             <div class="card">
                                 <div class="card-header" id="bandcamp">
                                     <h5 class="mb-0">
@@ -1553,7 +1567,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-filters2" role="tabpanel" aria-labelledby="list-filters-list">
-                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                        <div id="accordion">
                             <div class="card">
                                 <div class="card-header" id="bass">
                                     <h5 class="mb-0">
@@ -1576,7 +1590,8 @@
                                         <button class="btn btn-linkk collapsed" data-toggle="collapse"
                                             data-target="#collapsebassboost" aria-expanded="true"
                                             aria-controls="collapseSix">
-                                            <div class="card-h">ear bassboost <small class="text-muted">&ltamount (-10 -
+                                            <div class="card-h">ear bassboost <small class="text-muted">&ltamount
+                                                    (-10 -
                                                     10)&gt</small></div>
                                         </button>
                                     </h5>
@@ -1616,7 +1631,8 @@
                                 <div id="collapseequalizer" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Sets the equalizer of the current playing song.</br></br>Aliases: <kbd>eq</kbd>
+                                        Sets the equalizer of the current playing song.</br></br>Aliases:
+                                        <kbd>eq</kbd>
                                     </div>
                                 </div>
                             </div>
@@ -1687,7 +1703,7 @@
                     </div>
                     <div class="tab-pane fade" id="list-favorites2" role="tabpanel"
                         aria-labelledby="list-favorites-list">
-                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                        <div id="accordion">
 
                             <div class="card">
                                 <div class="card-header" id="add">
@@ -1711,7 +1727,8 @@
                                         <button class="btn btn-linkk collapsed" data-toggle="collapse"
                                             data-target="#collapsedelete" aria-expanded="true"
                                             aria-controls="collapseSix">
-                                            <div class="card-h">ear delete <small class="text-muted">&ltsong position&gt
+                                            <div class="card-h">ear delete <small class="text-muted">&ltsong
+                                                    position&gt
                                                     or all</small></div>
                                         </button>
                                     </h5>
@@ -1757,7 +1774,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-settings2" role="tabpanel" aria-labelledby="list-settings-list">
-                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                        <div id="accordion">
 
                             <div class="card">
                                 <div class="card-header" id="ignore">
@@ -1830,7 +1847,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="list-info2" role="tabpanel" aria-labelledby="list-info-list">
-                        <div id="accordion" style="padding-left: 3%; padding-right: 25%;">
+                        <div id="accordion">
 
                             <div class="card">
                                 <div class="card-header" id="donate">
@@ -1863,7 +1880,8 @@
                                 <div id="collapsehelp" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Sends you a dm of detailed list of Ear Tensifier's commands.</br></br>Aliases:
+                                        Sends you a dm of detailed list of Ear Tensifier's
+                                        commands.</br></br>Aliases:
                                         <kbd>commands, list</kbd></div>
                                 </div>
                             </div>
@@ -1961,7 +1979,8 @@
                                 <div id="collapsesupport" class="collapse" aria-labelledby="[object Object]"
                                     data-parent="#accordion">
                                     <div class="card-body">
-                                        Sends the support server for the bot.</br></br>Aliases: <kbd>server</kbd></div>
+                                        Sends the support server for the bot.</br></br>Aliases: <kbd>server</kbd>
+                                    </div>
                                 </div>
                             </div>
                             <div class="card">
@@ -2002,7 +2021,6 @@
             </div>
         </div>
     </div>
-
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

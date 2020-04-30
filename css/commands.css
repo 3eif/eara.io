@@ -79,27 +79,8 @@ body {
     border-color: #4742C2;
 }
 
-.mobile {
-    display: none;
-}
-
-@media only screen and (max-width: 1000px) {
-    .landscape {
-      display: none;
-    }
-
-    .mobile {
-        display: block;
-    }
-
-    .card-h {
-        width: 150px;
-        min-height:20%;
-        position: relative;
-    }
-
-    .mb-0 {
-        height: 75px;
-    }
-    
+.list-group {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
 }
