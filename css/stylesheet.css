@@ -55,6 +55,11 @@ body {
     color: white;
 }
 
+.badge-bot {
+    width: 100px;
+    height: 25px;
+}
+
 body {
     color: white;
 }
