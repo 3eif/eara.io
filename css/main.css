@@ -3,6 +3,10 @@ body {
     background-color: black !important;
 }
 
+.navbar-brand {
+    color: white !important;
+}
+
 h1 {
     font-weight: 500 !important;
     font-size: 75px !important;
