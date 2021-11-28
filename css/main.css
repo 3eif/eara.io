@@ -36,7 +36,16 @@ h3 {
     -webkit-text-fill-color: transparent;
     font-size: 30px !important;
     font-weight: 550 !important;
+    text-decoration: none !important;
 }
+
+a:link { text-decoration: none; }
+
+a:visited { text-decoration: none; }
+
+a:hover { text-decoration: none; }
+
+a:active { text-decoration: none; }
 
 .home-jumbotron {
     background-color: transparent !important;
@@ -196,4 +205,53 @@ img {
     -webkit-text-fill-color: rgb(202, 202, 202) !important;
     font-weight: 550 !important;
     font-size: 20px !important;
+}
+
+#features {
+    padding-top: 50px !important;
+}
+
+#commands {
+    padding-top: 50px !important;
+}
+
+#ears {
+    padding-top: 50px !important;
+}
+
+.feature {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.feature-title {
+
+}
+
+.feature-description {
+
+}
+
+.feature-image {
+    width: 250;
+    height: 250px;
+    padding: 20px;
+}
+
+.tensifier-image {
+    height: 300px !important;
+    width: 300px !important;
+    padding: 20px;
+}
+
+.tensifier-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left !important;
+}
+
+.card {
+    background-color: rgb(5, 5, 5) !important;
 }

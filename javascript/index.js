@@ -34,11 +34,6 @@ async function commands() {
             map.get(element.category).push(element);
         });
 
-        // make music category first in map
-        let music = map.get('music');
-        map.delete('music');
-        map.set('music', music);
-
         let ul = document.getElementById('pills-tab');
         let hasChosenFirst = false;
         map.forEach((value, key) => {
