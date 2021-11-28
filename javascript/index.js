@@ -10,11 +10,38 @@ async function statistics() {
 
     if (res.ok) {
         let json = await res.json();
-        document.getElementById('servers-stat').innerHTML = json.guilds;
-        document.getElementById('users-stat').innerHTML = json.users;
-        document.getElementById('players-stat').innerHTML = json.players;
-        // document.getElementById('commands-stat').innerHTML = json.commandsUsed;
-        // document.getElementById('songs-stat').innerHTML = json.songsPlayed;
+        console.log(json);
+
+        let serversStat = document.getElementById('servers-stat');
+        let usersStat = document.getElementById('users-stat');
+        let playersStat = document.getElementById('players-stat');
+        let commandsStat = document.getElementById('commands-stat');
+        let songsStat = document.getElementById('songs-stat');
+
+        serversStat.setAttribute('data-target', json.guilds < 1000 ? 50000 : json.guilds);
+        usersStat.setAttribute('data-target', json.users);
+        playersStat.setAttribute('data-target', json.players);
+        commandsStat.setAttribute('data-target', json.commandsUsed);
+        songsStat.setAttribute('data-target', json.songsPlayed);
+
+        const counters = document.querySelectorAll('.stat');
+
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const speed = 150;
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
+                const incrementRate = target / speed;
+
+                if (count < target) {
+                    counter.innerText = Math.round(count + incrementRate);
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            }
+            updateCount();
+        });
     }
 }
 
