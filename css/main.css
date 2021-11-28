@@ -100,12 +100,96 @@ img {
 .accordion-body {
     color: black !important;
     -webkit-text-fill-color: black !important;
+    padding: 10px !important;
 }
 
-.accordionSpacing.panel-group .panel + .panel {  
-    margin-top: 25px !important;
-}  
+.accordion-body {
+    background-color: black !important;
+}
+
+.accordion-button {
+    background-color: black !important;
+}
+
+.accordion-item:first-of-type .accordion-button {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
 
 .accordion-item {
-    margin-top: 10px !important;
+    border-radius: 0px !important;
+    border: 0px solid transparent !important;
+}
+
+.accordion-padding {
+    padding-top: 15px !important;
+}
+
+.collapsing {
+    transition: none !important;
+}
+
+.accordion-button {
+    background-color: rgb(9, 9, 9) !important;
+}
+
+.accordion-body {
+    background-color: rgb(18, 18, 18) !important;
+}
+
+
+.accordion-command-name {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+    font-weight: 500;
+    font-size: 22px;
+    padding-bottom: 10px;
+}
+
+.command-name-strong {
+    font-weight: 550 !important;
+    font-size: 25px !important;
+}
+
+.accordion-command-description {
+    color: grey !important;
+    -webkit-text-fill-color: rgb(180, 180, 180) !important;
+    font-weight: 500;
+    font-size: 17px;
+}
+
+.accordion-aliases-content {
+    color: grey;
+    -webkit-text-fill-color: rgb(180, 180, 180) !important;
+    font-weight: 500;
+    font-size: 17.6px;
+    padding-bottom: 10px;
+    padding-bottom: 10px !important;
+}
+
+.aliases-strong {
+    color: white !important;
+    -webkit-text-fill-color: rgb(202, 202, 202) !important;
+    font-weight: 550 !important;
+    font-size: 20px !important;
+}
+
+.accordion-examples-content {
+    color: grey;
+    -webkit-text-fill-color: rgb(180, 180, 180) !important;
+    font-weight: 500;
+    font-size: 17.6px;
+    padding-bottom: 10px !important;
+}
+
+.aliases-examples {
+    color: white !important;
+    -webkit-text-fill-color: rgb(202, 202, 202) !important;
+    font-weight: 550 !important;
+    font-size: 20px !important;
 }
