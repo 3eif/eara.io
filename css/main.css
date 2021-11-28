@@ -84,8 +84,13 @@ img {
     max-height:100%
 }
 
-.figure-caption {
-    color: rgb(200, 200, 200) !important;
+.navbar-brand {
+    font-size: 25px !important;
+    font-weight: 600 !important;
+    color: #33856c;
+    background: -webkit-repeating-linear-gradient(#fbc2eb, #a6c1ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .stat {
@@ -208,15 +213,15 @@ img {
 }
 
 #features {
-    padding-top: 50px !important;
+    padding-top: 100px !important;
 }
 
 #commands {
-    padding-top: 50px !important;
+    padding-top: 100px !important;
 }
 
 #ears {
-    padding-top: 50px !important;
+    padding-top: 100px !important;
 }
 
 .feature {
@@ -254,4 +259,18 @@ img {
 
 .card {
     background-color: rgb(5, 5, 5) !important;
+}
+
+.navbar-font {
+    font-size: 20px;
+    font-weight: 500 !important;
+    color: rgb(219, 219, 219) !important; 
+}
+
+.nav-item {
+    padding: 5px !important;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.918) !important;
 }
