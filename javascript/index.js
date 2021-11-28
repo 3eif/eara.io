@@ -71,7 +71,7 @@ async function commands() {
 
                 let button = document.createElement('button');
                 button.innerHTML = key.charAt(0).toUpperCase() + key.slice(1);
-                button.classList.add('nav-link');
+                button.classList.add('nav-link', 'pill-link');
                 button.id = `pills-${key}-tab`;
                 button.setAttribute('data-bs-toggle', 'pill');
                 button.setAttribute('data-bs-target', `#pills-${key}`);
