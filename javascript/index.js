@@ -209,5 +209,8 @@ async function commands() {
                 main.appendChild(div);
             }
         }, main);
+
+        let loading = document.getElementById('commands-loading');
+        loading.parentNode.removeChild(loading);
     }
 }
