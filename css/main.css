@@ -12,6 +12,7 @@ h1 {
     font-size: 75px !important;
     font-weight: 600 !important;
     background: -webkit-repeating-linear-gradient(#a6c1ee, #fbc2eb);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -21,6 +22,7 @@ h2 {
     font-weight: 550 !important;
     color: #33856c;
     background: -webkit-repeating-linear-gradient(#a1c4fd, #c2e9fb);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -32,6 +34,7 @@ p {
 
 h3 {
     background: -webkit-repeating-linear-gradient(#f0fff5, #38f9d7);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 30px !important;
@@ -87,12 +90,14 @@ hr {
 .pill-link.active {
     background: -webkit-repeating-linear-gradient(#f5f7fa, #c3cfe2) !important;
     color: black !important;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: black !important;
 }
 
 .link {
     background: -webkit-repeating-linear-gradient(#e0c3fc, #ffd1ff);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-decoration: none !important;
@@ -108,6 +113,7 @@ img {
     font-weight: 600 !important;
     color: #33856c;
     background: -webkit-repeating-linear-gradient(#fbc2eb, #a6c1ee);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -117,12 +123,14 @@ img {
     font-weight: 600 !important;
     color: #33856c;
     background: -webkit-repeating-linear-gradient(#FFC796, #FF6B95);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 .stat-name {
     background: white;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 30px !important;
@@ -249,10 +257,6 @@ img {
     align-items: center;
 }
 
-.feature-title {}
-
-.feature-description {}
-
 .feature-image {
     width: 250;
     height: 250px;
@@ -325,7 +329,7 @@ img {
     background-size: 300% 100%;
 
     border-radius: 10px;
-    moz-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -333,7 +337,7 @@ img {
 
 .btn-hover:hover {
     background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
     -webkit-transition: all .4s ease-in-out;
     transition: all .4s ease-in-out;
@@ -396,4 +400,16 @@ img {
 .btn-hover.color-11 {
     background-image: linear-gradient(to right, #eb3941, #f15e64, #e14e53, #e2373f);
     box-shadow: 0 5px 15px rgba(242, 97, 103, .4);
+}
+@media only screen and (max-width : 430px) {
+    .stat {
+        font-size: 50px !important;
+    }
+}
+@media only screen and (max-width : 350px) {
+    .add-button {
+        width: 40% !important;
+        font-weight: 400 !important;
+        font-size: 15px !important;
+    }
 }
