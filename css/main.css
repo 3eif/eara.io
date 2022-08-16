@@ -403,13 +403,13 @@ img {
 }
 @media only screen and (max-width : 430px) {
     .stat {
-        font-size: 50px;
+        font-size: 50px !important;
     }
 }
 @media only screen and (max-width : 350px) {
     .add-button {
-        width: 40%;
-        font-weight: 400;
-        font-size: 15px;
+        width: 40% !important;
+        font-weight: 400 !important;
+        font-size: 15px !important;
     }
 }
