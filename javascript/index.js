@@ -169,7 +169,7 @@ async function commands() {
                     const bP = [];
                     if (value[i].permissions.botPermissions instanceof Array) {
                         for (let j = 0; j < value[i].permissions.botPermissions.length; j++) {
-                            bP.push(value[i].permissions.botPermissions[j].replace(/_/g, ' ').replace(/\w\S*/g, function (txt) {
+                            bP.push(value[i].permissions.botPermissions[j].replace(/\w\S*/g, function (txt) {
                                 return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
                             }));
                         }
