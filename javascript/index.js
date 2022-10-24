@@ -8,41 +8,47 @@ async function statistics() {
         method: 'GET',
     });
 
+    let json = await res.json();
+    console.log(json);
+
+    let serversStat = document.getElementById('servers-stat');
+    let usersStat = document.getElementById('users-stat');
+    let playersStat = document.getElementById('players-stat');
+    let commandsStat = document.getElementById('commands-stat');
+    let songsStat = document.getElementById('songs-stat');
+
     if (res.ok) {
-        let json = await res.json();
-        console.log(json);
-
-        let serversStat = document.getElementById('servers-stat');
-        let usersStat = document.getElementById('users-stat');
-        let playersStat = document.getElementById('players-stat');
-        let commandsStat = document.getElementById('commands-stat');
-        let songsStat = document.getElementById('songs-stat');
-
         serversStat.setAttribute('data-target', json.guilds < 1000 ? 50000 : json.guilds);
         usersStat.setAttribute('data-target', json.users);
         playersStat.setAttribute('data-target', json.players);
         commandsStat.setAttribute('data-target', json.commandsUsed);
         songsStat.setAttribute('data-target', json.songsPlayed);
-
-        const counters = document.querySelectorAll('.stat');
-
-        counters.forEach(counter => {
-            const updateCount = () => {
-                const speed = 150;
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const incrementRate = target / speed;
-
-                if (count < target) {
-                    counter.innerText = Math.round(count + incrementRate);
-                    setTimeout(updateCount, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            }
-            updateCount();
-        });
+    } else {
+        serversStat.setAttribute('data-target', 179971 < 1000 ? 50000 : 179971);
+        usersStat.setAttribute('data-target', 12025943);
+        playersStat.setAttribute('data-target', 526);
+        commandsStat.setAttribute('data-target', 31902857);
+        songsStat.setAttribute('data-target', 42838930);
     }
+
+    const counters = document.querySelectorAll('.stat');
+
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const speed = 150;
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            const incrementRate = target / speed;
+
+            if (count < target) {
+                counter.innerText = Math.round(count + incrementRate);
+                setTimeout(updateCount, 1);
+            } else {
+                counter.innerText = target;
+            }
+        }
+        updateCount();
+    });
 }
 
 async function commands() {
