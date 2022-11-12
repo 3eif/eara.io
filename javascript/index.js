@@ -1,6 +1,6 @@
 window.onload = async function () {
     await statistics();
-    // await commands();
+    await commands();
 }
 
 async function statistics() {
