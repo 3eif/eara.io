@@ -17,7 +17,7 @@ async function statistics() {
     let commandsStat = document.getElementById('commands-stat');
     let songsStat = document.getElementById('songs-stat');
 
-    if (res.ok && json.guilds && json.users && json.players) {
+    if (res.ok) {
         serversStat.setAttribute('data-target', json.guilds < 1000 ? 50000 : json.guilds);
         usersStat.setAttribute('data-target', json.users);
         playersStat.setAttribute('data-target', json.players);
