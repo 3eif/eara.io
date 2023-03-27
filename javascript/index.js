@@ -13,7 +13,6 @@ async function statistics() {
 
     let serversStat = document.getElementById('servers-stat');
     let usersStat = document.getElementById('users-stat');
-    let playersStat = document.getElementById('players-stat');
     let commandsStat = document.getElementById('commands-stat');
     let songsStat = document.getElementById('songs-stat');
 
