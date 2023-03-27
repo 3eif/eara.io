@@ -20,13 +20,11 @@ async function statistics() {
     if (res.ok) {
         serversStat.setAttribute('data-target', json.guilds < 1000 ? 50000 : json.guilds);
         usersStat.setAttribute('data-target', json.users);
-        playersStat.setAttribute('data-target', json.players);
         commandsStat.setAttribute('data-target', json.commandsUsed);
         songsStat.setAttribute('data-target', json.songsPlayed);
     } else {
         serversStat.setAttribute('data-target', 179971 < 1000 ? 50000 : 179971);
         usersStat.setAttribute('data-target', 12025943);
-        playersStat.setAttribute('data-target', 526);
         commandsStat.setAttribute('data-target', 31902857);
         songsStat.setAttribute('data-target', 42838930);
     }
