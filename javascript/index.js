@@ -67,7 +67,7 @@ async function commands() {
         let ul = document.getElementById('pills-tab');
         let hasChosenFirst = false;
         map.forEach((value, key) => {
-            if (key != 'dev') {
+            if (key == 'bot' || key == 'filters' || key == 'settings') {
                 let li = document.createElement('li');
                 li.className = 'nav-item';
                 li.setAttribute('role', 'presentation');
