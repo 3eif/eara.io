@@ -101,7 +101,7 @@ async function commands() {
         let main = document.getElementById('pills-tabContent');
         let hasChosenFirst2 = false;
         map.forEach((value, key) => {
-            if (key != 'dev') {
+            if (key == 'bot' || key == 'filters' || key == 'settings') {
                 let div = document.createElement('div');
                 div.id = `pills-${key}`;
                 div.className = 'tab-pane fade';
